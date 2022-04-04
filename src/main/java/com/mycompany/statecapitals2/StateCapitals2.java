@@ -40,6 +40,7 @@ public class StateCapitals2 {
         //create a set based off the Key's in the Capitals hashmap
         Set<String> states = capitals.keySet();
         
+        
         //loop thru the set created in the previous line of code
         System.out.println("List of states:");
         for(String s : states) {
@@ -54,7 +55,7 @@ public class StateCapitals2 {
             if(count == stateIndex) {//once the index is equal to the random number it prints this out: 
                 Scanner in = new Scanner(System.in);//used to get the answer from user
                 System.out.println("Do you know the capital of " + s + "?");
-                userAns = in.next();
+                userAns = in.nextLine();
                 if(userAns.equalsIgnoreCase(capitals.get(s))) {//compares the answer given by user to hash map capital
                     System.out.println("Correct!");
                 }
@@ -65,7 +66,7 @@ public class StateCapitals2 {
             }
             
             count++;
-        }
+        }        
         sc.close();
     }
 }
